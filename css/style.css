@@ -26,7 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 300px; /* adiciona espaço entre logo e menu */
+  gap: 200px; /* adiciona espaço entre logo e menu */
   background: transparent !important;
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 /* header */
-/* ===== LOGO DO HEADER ===== */
+/* ===== LOGO ===== */
 .logo img {
   height: 42px;             /* ajuste o tamanho conforme o design */
   width: auto;
@@ -241,6 +241,18 @@ body {
   font-weight: 700;
 }
 
+/* Seção "Como funciona" - fica por baixo */
+.como-funciona {
+  position: relative;
+  z-index: 1;
+}
+
+/* Seção "Benefícios" - fica por cima */
+.beneficios {
+  position: relative;
+  z-index: 20;   /* maior que o da seção anterior */
+}
+
 /* ======== CARTÕES ======== */
 
 .etapas {
@@ -290,17 +302,6 @@ body {
 }
 
 /* ======== BENEFÍCIOS ======== */
-.beneficios {
-  width: 100%;
-  min-width: 100vw;
-  background-color: #271F63;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* Faixa superior */
 .beneficios-topo {
   width: 100%;
   background-color: #e9f0ff;
@@ -318,7 +319,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
   color: #22223b;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .titulo-beneficios span {
@@ -370,161 +371,163 @@ body {
   line-height: 1.6;
 }
 
-/* ======== FOOTER ======== */
-.footer {
-  background-color: #0b0521;
-  color: #e8e8f3;
-  font-family: "Poppins", sans-serif;
-  padding: 1rem 2rem 3rem;
-}
-
-.footer-container {
+/* Seção de benefícios inteira */
+.beneficios {
+  width: 100%;
   min-width: 100vw;
+  background-color: #271F63;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.beneficios-topo {
+  position: relative;
+  background: #e5edf9;    
+  padding: 130px 0 40px;   /* espaço extra em cima por causa do dragão */
+  overflow: visible;       
+}
+
+/* Container interno (já existe, só reforçando o layout) */
+.beneficios-topo .wrap {
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  align-items: start;
-  gap: 2rem;
-}
-
-.footer-container, .footer-bottom{
-  max-width:1200px; margin:0 auto; padding:0 2rem; background:transparent;
-}
-.footer-container{
-  display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:2rem; align-items:start;
-}
-
-/* Coluna 1 - Marca */
-.footer-logo {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-.footer-logo span {
-  background: linear-gradient(90deg, #7a5cff, #ff4fd8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.footer-text {
-  font-size: 0.95rem;
-  color: #bfc2d9;
-  margin-top: 0.4rem;
-}
-
-/* Coluna 2 - Contato */
-.footer-col h4 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-.footer-link {
-  color: #e8e8f3;
-  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.footer-link:hover {
-  opacity: 1;
-  transform: translateY(-2px);
+  gap: 32px;
 }
 
-/* Coluna 3 - Redes Sociais */
-.social-links {
-  display: flex;
-  gap: 0.6rem;
-}
-.social-links a {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  color: #e8e8f3;
-  transition: all 0.3s ease;
-}
-.social-links a:hover {
-  border-color: rgba(255, 79, 216, 0.7);
-  box-shadow: 0 0 14px rgba(255, 79, 216, 0.4);
-  transform: translateY(-3px);
+/*sobreposição do mascote */
+.beneficios-topo img {
+  position: absolute;
+  left: 200px;
+  top: -90px;  
+  width: 606px;
+  height: auto;
+  z-index: 20;
+  pointer-events: none;
 }
 
-/* Linha divisória */
-.footer-divider {
-  max-width: 1200px;
-  margin: 1.5rem auto 1rem;
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #7a5cff44, #ff4fd844, transparent);
+/* Título fica ao lado */
+.titulo-beneficios {
+  margin-left: 300px;      /* dá espaço pro dragão à esquerda */
 }
 
-/* Rodapé inferior */
-.footer-bottom {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
-  color: #a7aac3;
+
+/* ======== FOOTER ======== */
+.footer {
+  width: 100%;
+  background-color: #05011a;  /* fundo escuro em TODA a largura */
+  color: #ffffff;
+  padding: 2.5rem 0 2rem;     /* só padding vertical aqui */
   font-size: 0.9rem;
 }
 
-/* Links do footer SEM sublinhado */
-.footer a{ text-decoration:none !important; }
-
-/* Logo como bloco, evita “puxar” o parágrafo junto */
-.footer .logo{ display:inline-block; }
-.footer .logo img{ display:block; height:38px; width:auto; }
-
-/* Texto ao lado da logo */
-.footer-text{ margin-top:.5rem; color:#bfc2d9; font-size:.95rem; }
-
-/* Ícones sociais */
-.social-links{ display:flex; gap:.6rem; }
-.social-links a{
-  width:36px; height:36px; display:grid; place-items:center;
-  border:1.5px solid rgba(255,255,255,.25);
-  border-radius:50%; color:#e8e8f3; transition:.3s;
-}
-.social-links a i{ font-size:14px; line-height:1; }
-.social-links a:hover{
-  border-color:rgba(255,79,216,.7); box-shadow:0 0 14px rgba(255,79,216,.4);
-  transform:translateY(-3px);
+/* CONTAINER CENTRALIZADO */
+.footer-container {
+  max-width: 1200px;        /* largura máxima do conteúdo */
+  margin: 0 auto;           /* centraliza o conteúdo */
+  padding: 0 80px;          /* espaço lateral (igual às outras seções) */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  background: transparent;  /* GARANTA que não tenha background aqui */
 }
 
-/* Divider */
-.footer-divider{
-  border:none; height:1px; margin:1.5rem auto 1rem; max-width:1200px;
-  background:linear-gradient(90deg,transparent,#7a5cff44,#ff4fd844,transparent);
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-/* 1) Garanta que o menu fica POR CIMA de qualquer coisa do hero */
+/* Coluna da marca */
+.footer-col.brand img {
+  height: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col.brand .footer-text {
+  max-width: 260px;
+  color: #cfcbe8;
+}
+
+/* Contato */
+.footer-col.contact h4,
+.footer-col.social h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col.contact .footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #cfcbe8;
+  text-decoration: none;
+}
+
+.footer-col.contact .footer-link i {
+  font-size: 0.9rem;
+}
+
+/* Redes sociais */
+.footer-col.social .social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-col.social .social-links a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #cfcbe8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcbe8;
+  text-decoration: none;
+}
+
+/* Linha e texto final */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 1.5rem auto 1rem;
+  max-width: 1200px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  color: #8e88b8;
+  font-size: 0.8rem;
+}
+
 .navbar {
   position: relative;
   z-index: 50;
 }
 
-/* Se tiver camadas decorativas no header/hero, elas não devem bloquear o mouse */
 .hero::before,
 .hero::after,
 .hero-image,
 .hero-image img {
-  z-index: 1;             /* fica atrás do menu */
+  z-index: 1;         
 }
 
-/* 2) Aumente a área clicável dos links do menu */
 .nav-links a {
-  display: inline-flex;       /* torna o link uma “caixinha” clicável */
+  display: inline-flex;
   align-items: center;
-  padding: 10px 14px;         /* clique confortável */
+  padding: 10px 14px;         
   line-height: 1;             
-  border-radius: 8px;         /* opcional: hover bonito */
+  border-radius: 8px;        
   text-decoration: none;
 }
 
-
-/* Espaço entre os itens e estado hover/active mais fácil de acertar */
 .nav-links {
   display: flex;
   gap: 30px;                  
@@ -587,6 +590,91 @@ body {
     text-align: center;
   }
 }
+
+/* ===== AJUSTES MOBILE PARA A SEÇÃO DE BENEFÍCIOS ===== */
+@media (max-width: 768px) {
+  .beneficios-topo {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+
+  .beneficios-topo .wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .beneficios-topo img {
+    position: absolute;
+    top: -70px;              /* continua “subindo” pra sobrepor a seção de cima */
+    left: 50%;               /* centro da tela */
+    transform: translateX(-50%);
+    width: 280px;            /* menor para caber em telas pequenas */
+    height: auto;
+  }
+
+  /* tira o margin-left gigante do título no mobile */
+  .titulo-beneficios {
+    margin-left: 0;
+    font-size: 2.1rem;
+    text-align: center;
+  }
+
+}
+
+
+/* ===== AJUSTE APENAS PARA TABLET ===== */
+@media (min-width: 700px) and (max-width: 1024px) {
+  .beneficios-topo img {
+    left: 120px !important;   
+    width: 455px;              
+  }
+}
+
+/* ====== FOOTER RESPONSIVO (TABLET / CELULAR) ====== */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 2rem 0 1.5rem;
+    font-size: 0.85rem;
+  }
+
+
+  .footer-container,
+  .footer-bottom {
+    max-width: 100%;
+    padding: 0 16px;        
+  }
+
+  .footer-container {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-col.brand .footer-text {
+    max-width: 100%;
+  }
+
+  .footer-col.social .social-links {
+    justify-content: flex-start;
+  }
+
+  .footer-divider {
+    max-width: 100%;
+    margin: 1.5rem 16px 1rem;
+  }
+
+  .footer-bottom {
+    text-align: left;
+  }
+}
+
 
 
 
