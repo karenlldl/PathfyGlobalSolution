@@ -15,7 +15,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--bg-dark);
   color: var(--text-light);
   margin: 0;
   padding: 0;
@@ -107,8 +106,6 @@ body {
 }
 
 .hero {
-  background: radial-gradient(circle at top left, #382f7d 0%, #09042d 40%),
-              radial-gradient(circle at top right, #ff4fd8 0%, #0b0521 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,12 +232,12 @@ body {
 /* ======== COMO FUNCIONA ======== */
 .como-funciona {
   width: 100%;
-  min-width: 100vw;
   background: linear-gradient(180deg, #0d0424 0%, #0b0521 100%);
   padding: 4rem 2rem 5rem;
   color: #ffffff;
   text-align: center;
   position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -263,17 +260,6 @@ body {
   font-weight: 700;
 }
 
-/* Seção "Como funciona" - fica por baixo */
-.como-funciona {
-  position: relative;
-  z-index: 1;
-}
-
-/* Seção "Benefícios" - fica por cima */
-.beneficios {
-  position: relative;
-  z-index: 20;   /* maior que o da seção anterior */
-}
 
 /* ======== CARTÕES ======== */
 
@@ -354,7 +340,6 @@ body {
 
 .beneficios-cards {
   width: 100%;
-
   background: transparent;
   padding: 4rem 2rem;
   display: grid;
@@ -396,7 +381,6 @@ body {
 /* Seção de benefícios inteira */
 .beneficios {
   width: 100%;
-  min-width: 100vw;
   background-color: #271F63;
   color: #fff;
   margin: 0;
@@ -538,6 +522,117 @@ body {
   }
 }
 
+/* ============ SEÇÃO CONTATO ============ */
+
+.contato {
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+}
+
+/* Lado esquerdo (mascote + Pathfy) */
+.contato-esq {
+  flex: 1;
+  background-color: #dfeafa;              /* azul clarinho */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+
+.contato-esq img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
+
+/* Lado direito (formulário) */
+.contato-dir {
+  flex: 1;
+  background-color: #09042D;              
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.contato-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #DEE9F6;
+  border-radius: 26px;
+  padding: 2rem 2.2rem 2.4rem;
+}
+
+/* Formulário */
+
+.campo {
+  margin-bottom: 1.4rem;
+  color: #718bcf;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.campo input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #718BCF;
+  padding: 0.4rem 0;
+  background: transparent;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.campo input::placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+/* Área de mensagem */
+.campo-textarea label {
+  margin-bottom: 0.5rem;
+}
+
+.campo-textarea textarea {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 0.8rem 1rem;
+  resize: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+/* Botão */
+.campo-botao {
+  text-align: right;
+  margin-top: 0.8rem;
+}
+
+.btn-enviar {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 2.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff7ad9, #7f7dff);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  opacity: 0.95;
+}
 
 /* ======== FOOTER ======== */
 .footer {
