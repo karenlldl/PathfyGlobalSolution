@@ -741,29 +741,18 @@ body {
   gap: 14px;
 }
 .pergunta {
-  background: #fff;
-  border-left: 6px solid #09042D;
+  background: #4f4786;
+  border-left: 6px solid #7B71C0;
   border-radius: 12px;
   padding: 16px 18px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 .pergunta h3 {
   position: relative;
   padding: 8px 40px 8px 4px;
   font-size: 18px;
-  color: #09042D;
+  color: #ffffff;
   cursor: pointer;
   font-weight: 700;
-}
-.pergunta h3 .faq-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #f78b1f;
-  color: #fff;
-  border-radius: 8px;
-  padding: 4px 10px;
 }
 .pergunta p {
   max-height: 0;

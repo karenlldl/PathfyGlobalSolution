@@ -1,16 +1,19 @@
-//
+// MENU MOBILE
 const menuToggle = document.querySelector(".menu-toggle");
 const navRight = document.querySelector(".nav-right");
 
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("open");
-  navRight.classList.toggle("open");
-});
+if (menuToggle && navRight) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("open");
+    navRight.classList.toggle("open");
+  });
+}
 
-// Mensagem de envio de contato
-  const form = document.getElementById("form-contato");
+// MENSAGEM DE ENVIO DE CONTATO (só se o form existir na página)
+const form = document.getElementById("form-contato");
 
-  form.addEventListener("submit", function(event) {
+if (form) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault(); // impede envio real
 
     if (!form.checkValidity()) {
@@ -19,33 +22,33 @@ menuToggle.addEventListener("click", () => {
     }
 
     alert("Mensagem enviada, entraremos em contato!");
-    
+
     form.reset(); // limpa o formulário (opcional)
   });
+}
 
-  //FAQ ABA PERGUNTAS
-  document.addEventListener('DOMContentLoaded', function () {
-    const perguntas = document.querySelectorAll('.faq .pergunta');
+// FAQ – ABRIR/FECHAR PERGUNTAS
+const perguntas = document.querySelectorAll(".faq .pergunta");
 
-    perguntas.forEach(pergunta => {
-      const titulo = pergunta.querySelector('h3');
+if (perguntas.length) {
+  perguntas.forEach((pergunta) => {
+    const titulo = pergunta.querySelector("h3");
 
-      // deixa claro que é clicável
-      titulo.style.cursor = 'pointer';
+    if (!titulo) return;
 
-      titulo.addEventListener('click', function () {
+    titulo.style.cursor = "pointer";
 
-        // Se quiser que ABRA/SÓ FECHA ESSA (sem fechar as outras), basta usar só a linha abaixo:
-        // pergunta.classList.toggle('ativa');
-
-        // Se quiser que ao abrir uma, feche as outras:
-        perguntas.forEach(p => {
-          if (p !== pergunta) {
-            p.classList.remove('ativa');
-          }
-        });
-
-        pergunta.classList.toggle('ativa');
+    titulo.addEventListener("click", function () {
+      // fecha as outras
+      perguntas.forEach((p) => {
+        if (p !== pergunta) {
+          p.classList.remove("ativa");
+        }
       });
+
+      // abre/fecha a clicada
+      pergunta.classList.toggle("ativa");
     });
   });
+}
+
