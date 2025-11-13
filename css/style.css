@@ -318,7 +318,7 @@ body {
 .titulo-beneficios {
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
-  color: #22223b;
+  color: #61488E;
   font-weight: 700;
 }
 
@@ -597,7 +597,7 @@ body {
 @media (min-width: 992px) and (max-width: 1299px) {
 
   .beneficios-topo {
-    padding: 50px 0 60px; /* ajusta o espaço pro dragão não esmagar o título */
+    padding: 50px 0 60px; 
   }
 
   .beneficios-topo .wrap {
@@ -606,13 +606,13 @@ body {
   }
 
   .beneficios-topo img {
-    width: 460px;      /* menor que o desktop padrão */
-    left: 20px;       /* arruma posição lateral */
-    top: -80px;        /* mantém a sobreposição bonita */
+    width: 460px;      
+    left: 20px;       
+    top: -80px;        
   }
 
   .titulo-beneficios {
-    margin-left: 330px; /* texto ao lado do dragão */
+    margin-left: 330px; 
     font-size: 2.6rem;
   }
 }
@@ -630,12 +630,12 @@ body {
   }
 
   .titulo-beneficios {
-    margin-left: 220px;   /* espaço pro dragão ficar à esquerda */
+    margin-left: 220px;   
     font-size: 2.4rem;
   }
 }
 
-/* TELAS MÉDIAS (celular grande / tablet pequeno – 481px até 767px)
+/* TELAS MÉDIAS (481px até 767px)
 */
 @media (min-width: 481px) and (max-width: 767px) {
   .beneficios-topo {
@@ -671,65 +671,119 @@ body {
   }
 }
 
-/* MOBILE (até 480px) – versão que o professor vai olhar com carinho */
+/* MOBILE (até 480px)*/
 @media (max-width: 480px) {
   .beneficios-topo {
-    padding: 10px 0 8px;   /* espaço pro dragão antes do texto */
+    padding: 10px 0 8px;   
   }
 
   .beneficios-topo img {
-    left: -68px;              /* “de ladinho” na esquerda */
-    top: -50px;              /* ainda subindo por cima da faixa roxa */
-    width: 280px;            /* tamanho ideal pro celular */
+    left: -68px;              
+    top: -50px;              
+    width: 280px;            
   }
 
   .titulo-beneficios {
-    margin-left: 120px;      /* texto ao lado do dragão, não embaixo */
+    margin-left: 120px;      
     font-size: 1.8rem;
   }
 }
 
 
 /* ====== FOOTER RESPONSIVO (TABLET / CELULAR) ====== */
-@media (max-width: 768px) {
-
-  .footer {
-    padding: 2rem 0 1.5rem;
-    font-size: 0.85rem;
+/* TABLET – 768px até 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-container {
+    padding: 0 2rem;
+    gap: 4rem;              /* em vez de 20rem */
+    flex-wrap: wrap;        /* deixa quebrar linha se faltar espaço */
   }
 
+  .footer-col {
+    flex: 1;
+    min-width: 220px;       /* garante largura mínima pra cada bloco */
+  }
 
-  .footer-container,
   .footer-bottom {
     max-width: 100%;
-    padding: 0 16px;        
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+
+/* MOBILE – até 480px */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center !important;   
+    text-align: center !important;    
+    gap: 1.5rem;
+    padding: 0 1.5rem;
   }
 
   .footer-container {
-    flex-direction: column; 
+    flex-direction: column;     /* empilha as colunas */
     align-items: flex-start;
     gap: 1.5rem;
+    padding: 0 1.5rem;
   }
 
   .footer-col {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;              /* <--- centraliza dentro da coluna */
+    text-align: center;
+  }
+
+  .footer-col.brand,
+  .footer-col.contact,
+  .footer-col.social {
+    width: 100%;
+  }
+
+  .footer-col.brand img {
+    height: 28px;
   }
 
   .footer-col.brand .footer-text {
     max-width: 100%;
   }
 
-  .footer-col.social .social-links {
-    justify-content: flex-start;
-  }
-
   .footer-divider {
     max-width: 100%;
-    margin: 1.5rem 16px 1rem;
+    margin: 1.25rem 1.5rem 1rem;
   }
 
   .footer-bottom {
-    text-align: left;
+    width: 100%;
+    padding: 0 1.5rem;
+    text-align: center !important; 
+    font-size: 0.75rem;
+  }
+}
+
+/*CELULAR GRANDE / TABLET (481px até 767px)*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 420px; /* para não ficar esticado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
   }
 }
 
