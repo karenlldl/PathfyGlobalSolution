@@ -22,3 +22,30 @@ menuToggle.addEventListener("click", () => {
     
     form.reset(); // limpa o formulário (opcional)
   });
+
+  //FAQ ABA PERGUNTAS
+  document.addEventListener('DOMContentLoaded', function () {
+    const perguntas = document.querySelectorAll('.faq .pergunta');
+
+    perguntas.forEach(pergunta => {
+      const titulo = pergunta.querySelector('h3');
+
+      // deixa claro que é clicável
+      titulo.style.cursor = 'pointer';
+
+      titulo.addEventListener('click', function () {
+
+        // Se quiser que ABRA/SÓ FECHA ESSA (sem fechar as outras), basta usar só a linha abaixo:
+        // pergunta.classList.toggle('ativa');
+
+        // Se quiser que ao abrir uma, feche as outras:
+        perguntas.forEach(p => {
+          if (p !== pergunta) {
+            p.classList.remove('ativa');
+          }
+        });
+
+        pergunta.classList.toggle('ativa');
+      });
+    });
+  });

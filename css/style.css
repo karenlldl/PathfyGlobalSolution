@@ -18,7 +18,7 @@ body {
   color: var(--text-light);
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, #12073a, #0a0434);
+  background: linear-gradient(90deg, #271F63, #09042D);
 }
 
 /* NAVBAR */
@@ -164,6 +164,15 @@ body {
              dragonGlow 6s ease-in-out infinite;
   filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.45));
   transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero-image-play img {
+  display: block;
+  max-width: 540px;       
+  height: auto;
+  position: relative;
+  right: -60px;           
+  top: 28px;              
 }
 
 @keyframes dragonFloat {
@@ -634,25 +643,171 @@ body {
   opacity: 0.95;
 }
 
+/*-----CURSOS------*/
+.grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.20) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.20) 1px, transparent 1px);
+    
+  background-size: 330px 300px;
+  background-position: 0 0;
+
+}
+
+/*------SEÇÃO CURSOS-----*/
+.cursos-section {
+  padding: 60px 5%;
+  background: #DEE9F6;
+  text-align: center;
+}
+
+.titulo-cursos {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2f2768;
+}
+
+.cursos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.curso-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: .3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.curso-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Imagem */
+.curso-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Título */
+.curso-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2f2768;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.curso-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Informações */
+.curso-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/*-----FAQ------*/
+/* FAQ */
+.faq-container {
+  background: #DEE9F6;
+  padding: 60px 8% 80px;
+}
+.faq-titulo {
+  text-align: center;
+  color: #09042D;
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 800;
+  margin: 0 auto 28px;
+}
+.faq {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+.pergunta {
+  background: #fff;
+  border-left: 6px solid #09042D;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+.pergunta h3 {
+  position: relative;
+  padding: 8px 40px 8px 4px;
+  font-size: 18px;
+  color: #09042D;
+  cursor: pointer;
+  font-weight: 700;
+}
+.pergunta h3 .faq-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f78b1f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+.pergunta p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.pergunta.ativa p {
+  max-height: 400px;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+.faq .pergunta p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  margin: 0;
+}
+
+.faq .pergunta.ativa p {
+  max-height: 300px; /* espaço suficiente pra caber o texto */
+  margin-top: 8px;
+}
+
 /* ======== FOOTER ======== */
 .footer {
   width: 100%;
-  background-color: #05011a;  /* fundo escuro em TODA a largura */
+  background-color: #05011a;  
   color: #ffffff;
-  padding: 2.5rem 0 2rem;     /* só padding vertical aqui */
+  padding: 2.5rem 0 2rem;     
   font-size: 0.9rem;
 }
 
 /* CONTAINER CENTRALIZADO */
 .footer-container {
-  max-width: 1200px;        /* largura máxima do conteúdo */
-  margin: 0 auto;           /* centraliza o conteúdo */
-  padding: 0 80px;          /* espaço lateral (igual às outras seções) */
+  max-width: 1200px;        
+  margin: 0 auto;           
+  padding: 0 80px;          
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 3rem;
-  background: transparent;  /* GARANTA que não tenha background aqui */
+  background: transparent;  
 }
 
 .footer-col {
