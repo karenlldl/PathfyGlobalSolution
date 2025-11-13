@@ -591,46 +591,104 @@ body {
   }
 }
 
-/* ===== AJUSTES MOBILE PARA A SEÇÃO DE BENEFÍCIOS ===== */
-@media (max-width: 768px) {
+/* =============== RESPONSIVIDADE DA SEÇÃO BENEFÍCIOS =============== */
+
+/* ===== DESKTOP PEQUENO (992px até 1299px) ===== */
+@media (min-width: 992px) and (max-width: 1299px) {
+
   .beneficios-topo {
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding: 50px 0 60px; /* ajusta o espaço pro dragão não esmagar o título */
   }
 
   .beneficios-topo .wrap {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    gap: 16px;
   }
 
   .beneficios-topo img {
-    position: absolute;
-    top: -70px;              /* continua “subindo” pra sobrepor a seção de cima */
-    left: 50%;               /* centro da tela */
-    transform: translateX(-50%);
-    width: 280px;            /* menor para caber em telas pequenas */
-    height: auto;
+    width: 460px;      /* menor que o desktop padrão */
+    left: 20px;       /* arruma posição lateral */
+    top: -80px;        /* mantém a sobreposição bonita */
   }
 
-  /* tira o margin-left gigante do título no mobile */
   .titulo-beneficios {
-    margin-left: 0;
-    font-size: 2.1rem;
-    text-align: center;
+    margin-left: 330px; /* texto ao lado do dragão */
+    font-size: 2.6rem;
   }
-
 }
 
+/* TABLET (entre 768px e 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .beneficios-topo {
+    padding: 32px 0 40px;
+  }
 
-/* ===== AJUSTE APENAS PARA TABLET ===== */
-@media (min-width: 700px) and (max-width: 1024px) {
   .beneficios-topo img {
-    left: 120px !important;   
-    width: 455px;              
+    left: -20px;      
+    top: -80px;
+    width: 380px; 
+  }
+
+  .titulo-beneficios {
+    margin-left: 220px;   /* espaço pro dragão ficar à esquerda */
+    font-size: 2.4rem;
   }
 }
+
+/* TELAS MÉDIAS (celular grande / tablet pequeno – 481px até 767px)
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .beneficios-topo {
+    padding: 20px 0 20px;
+  }
+
+  .beneficios-topo img {
+    left: -50px;
+    top: -70px;
+    width: 382px;
+  }
+
+  .titulo-beneficios {
+    margin-left: 200px;
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 616px) and (max-width: 767px) {
+  .beneficios-topo {
+    padding: 50px 0 40px;
+  }
+
+  .beneficios-topo img {
+    left: -50px;
+    top: -70px;
+    width: 382px;
+  }
+
+  .titulo-beneficios {
+    margin-left: 200px;
+    font-size: 2.1rem;
+  }
+}
+
+/* MOBILE (até 480px) – versão que o professor vai olhar com carinho */
+@media (max-width: 480px) {
+  .beneficios-topo {
+    padding: 10px 0 8px;   /* espaço pro dragão antes do texto */
+  }
+
+  .beneficios-topo img {
+    left: -68px;              /* “de ladinho” na esquerda */
+    top: -50px;              /* ainda subindo por cima da faixa roxa */
+    width: 280px;            /* tamanho ideal pro celular */
+  }
+
+  .titulo-beneficios {
+    margin-left: 120px;      /* texto ao lado do dragão, não embaixo */
+    font-size: 1.8rem;
+  }
+}
+
 
 /* ====== FOOTER RESPONSIVO (TABLET / CELULAR) ====== */
 @media (max-width: 768px) {
