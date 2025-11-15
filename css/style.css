@@ -112,7 +112,6 @@ body {
   overflow: hidden;
   margin-top: 12px;
   padding-top: 40px; 
-  background: linear-gradient(90deg, #2f2768, #0a0730);
   margin: 0;
   justify-content: center;
 }
@@ -1289,9 +1288,119 @@ line-height: 1.6rem;
 color: #dcdcdc;
 }
 
-/* =========================================================
-   HERO / HEADER RESPONSIVO PARA OS TAMANHOS DA FIAP
-   ========================================================= */
+/*--------PÁGINA LOGIN isolado --------*/
+.lg-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.lg-container {
+    width: 50%;
+    max-width: 1100px;
+    height: 700px;
+    background: #E2EDF7;
+    border-radius: 18px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.lg-left {
+    width: 50%;
+    background: #B5CDE9;
+    padding: 50px;
+    position: relative;
+}
+
+.lg-title-menor {
+    font-size: 26px;
+    color: #8589D5;
+    margin: 0;
+}
+
+.lg-title-maior {
+    font-size: 59px;
+    font-weight: 700;
+    margin-top: -20px;
+    color: rgba(255, 255, 255, 0.44);
+}
+
+.lg-mascote {
+    width: 500px;
+    position: absolute;
+    bottom: 0px;
+    right: -130px;
+    z-index: 5;
+}
+
+.lg-right {
+    width: 55%;
+    padding: 60px 70px;
+}
+
+.lg-login-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5A63D9;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+.lg-label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+.lg-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: none;
+    background: #C7D7EB;
+    font-size: 15px;
+}
+
+.lg-btn {
+    width: 160px;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: white;
+    background: linear-gradient(90deg, #B5CDE9, #6E9DD4);
+    cursor: pointer;
+}
+
+.lg-btn:hover {
+    opacity: 0.9;
+}
+
+.lg-register-text {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #09042D;
+}
+
+.lg-register-link {
+    color: #6F76EA;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lg-register-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ------- HERO / HEADER RESPONSIVO --------*/
 
 /* MOBILE – até 480px (5 pontos) */
 @media (max-width: 480px) {

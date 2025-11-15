@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathfy - Contato</title>
+    <title>Pathfy - Login</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <header class="hero">
@@ -22,69 +23,52 @@
 
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="sobre.html">Sobre</a></li>
       <li><a href="integrantes.html">Integrantes</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contato.html" class="active">Contato</a></li>
+      <li><a href="contato.html">Contato</a></li>
       <li><a href="cursos.html">Cursos</a></li>
     </ul>
 
     <a href="paginaLogin.html" class="btn-login">Login</a>
   </div>
 </nav>
-    <section class="hero-content" id="home">
-      <div class="hero-text">
-        <h1>Sobre nós</h1>
-        <p>Inicie uma nova conexão — fale com o time Pathfy.</p>
-      </div>
-      <div class="hero-image">
-        <img src="assets/images/mascote_contato.png" alt="Mascote Pathfy" />
-      </div>
-      </section>
-      </header>
+</header>
+    <main class="lg-main">
+        <div class="lg-container">
 
-  <main>
-      <section class="contato" id="contato">
-  <div class="contato-esq">
-    <img src="assets/images/contato.png" alt="imagem de contato com mascote">
-  </div>
+            <div class="lg-left">
+                <h2 class="lg-title-menor">Continue sua</h2>
+                <h1 class="lg-title-maior">Jornada</h1>
+                <img src="assets/images/mascote_login.png" class="lg-mascote" alt="Mascote Pathfy">
+            </div>
 
-  <div class="contato-dir">
-    <div class="contato-card">
+            <div class="lg-right">
+                <h2 class="lg-login-title">Login</h2>
 
-      <form id="form-contato">
-        <div class="campo">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <form class="lg-form" id="lg-form">
+                    <label class="lg-label">Email</label>
+                    <input type="email" class="lg-input" id="lg-email">
+
+                    <label class="lg-label">Senha</label>
+                    <input type="password" class="lg-input" id="lg-senha">
+
+                    <button type="submit" class="lg-btn">Entrar</button>
+
+                    <p class="lg-register-text">
+                        Ainda não tem uma conta?
+                        <a href="#" class="lg-register-link">Cadastre-se</a>
+                    </p>
+                </form>
+            </div>
+
         </div>
 
-        <div class="campo">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-        </div>
+    </main>
 
-        <div class="campo">
-          <label for="telefone">Telefone/Celular:</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required>
-        </div>
-
-        <div class="campo campo-textarea">
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui" rows="5" required></textarea>
-        </div>
-
-        <div class="campo campo-botao">
-          <button type="submit" class="btn-enviar">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="footer-container container">
+    <footer class="footer">
+    <div class="footer-container container">
     <div class="footer-col brand">
       <a href="index.html" class="logo">
         <img src="assets/images/logo_pathfy.png" alt="Logo Pathfy">
@@ -117,7 +101,7 @@
   </div>
 </footer>
 
-      <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 
 <!-- ================= VLibras (Gratuito e Oficial) ================= -->
   <div vw class="enabled">

@@ -23,7 +23,7 @@ if (form) {
 
     alert("Mensagem enviada, entraremos em contato!");
 
-    form.reset(); // limpa o formulário (opcional)
+    form.reset(); 
   });
 }
 
@@ -46,9 +46,9 @@ if (perguntas.length) {
         }
       });
 
-      // abre/fecha a clicada
       pergunta.classList.toggle("ativa");
     });
   });
 }
 
+//LOGIN - VALIDA E ENTRA
