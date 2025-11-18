@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfy - Cadastro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="hero">
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo_pathfy.png" alt="Pathfy">
+  </a>
+
+  <button class="menu-toggle">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="cursos.html">Cursos</a></li>
+    </ul>
+
+    <a href="paginaLogin.html" class="btn-login">Login</a>
+  </div>
+</nav>
+</header>
+    <main class="lg-main">
+        <div class="lg-container">
+
+            <div class="lg-left">
+                <h2 class="lg-title-menor">Continue sua</h2>
+                <h1 class="lg-title-maior">Jornada</h1>
+                <img src="assets/images/mascote_login.png" class="lg-mascote" alt="Mascote Pathfy">
+            </div>
+
+            <div class="lg-right">
+                <h2 class="lg-login-title">Cadastro</h2>
+
+                <form class="lg-form" id="lg-form">
+
+                    <div class="lg-campo">
+                        <label for="lg-nome" class="lg-label">Nome</label>
+                        <input type="text" class="lg-input" id="lg-nome">
+                    </div>
+
+                    <div class="lg-campo">
+                        <label for="lg-empresa" class="lg-label">Empresa</label>
+                        <input type="text" class="lg-input" id="lg-empresa">
+                    </div>
+
+                    <div class="lg-campo">
+                        <label for="lg-cargo" class="lg-label">Cargo atual</label>
+                        <input type="text" class="lg-input" id="lg-cargo">
+                    </div>
+
+                    <div class="lg-campo">
+                        <label for="lg-interesses" class="lg-label">Interesses de aprendizado </label>
+                        <select class="lg-input" id="interesses">
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="tecnologia">Python</option>
+                            <option value="gestao">Front-End</option>
+                            <option value="gestao">Java</option>
+                            <option value="soft-skills">UX/UI</option>
+                            <option value="outros">Agile</option>
+                            <option value="outros">Scrum</option>
+                            <option value="outros">Marketing</option>
+                            <option value="outros">Full Stack</option>
+                        </select>
+                    </div>
+
+                    <div class="lg-campo">
+                        <label for="lg-email" class="lg-label">Email</label>
+                        <input type="email" class="lg-input" id="lg-email">
+                    </div>
+
+                    <div class="lg-campo">
+                        <label for="lg-senha" class="lg-label">Senha</label>
+                        <input type="password" class="lg-input" id="lg-senha">
+                    </div>
+
+                    <button type="submit" class="lg-btn">Registrar-se</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container container">
+    <div class="footer-col brand">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo_pathfy.png" alt="Logo Pathfy">
+      </a>
+      <p class="footer-text">O caminho da evolução profissional.</p>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contato</h4>
+      <a href="mailto:rm566870@fiap.com.br" class="footer-link">
+        <i class="fa-solid fa-envelope"></i>
+        rm566870@fiap.com.br
+      </a>
+    </div>
+
+    <div class="footer-col social">
+      <h4>Redes Sociais</h4>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <p>2025 © Pathfy — Denise • Henrique • Karen</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

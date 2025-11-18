@@ -48,17 +48,22 @@
                 <h2 class="lg-login-title">Login</h2>
 
                 <form class="lg-form" id="lg-form">
-                    <label class="lg-label">Email</label>
-                    <input type="email" class="lg-input" id="lg-email">
 
-                    <label class="lg-label">Senha</label>
-                    <input type="password" class="lg-input" id="lg-senha">
+                  <div class="lg-campo">
+                    <label for="lg-email" class="lg-label">Email</label>
+                    <input type="email" class="lg-input" id="lg-email" required>
+                  </div>
+
+                  <div class="lg-campo">
+                    <label for="lg-senha" class="lg-label">Senha</label>
+                    <input type="password" class="lg-input" id="lg-senha" required>
+                  </div>
 
                     <button type="submit" class="lg-btn">Entrar</button>
 
                     <p class="lg-register-text">
                         Ainda não tem uma conta?
-                        <a href="#" class="lg-register-link">Cadastre-se</a>
+                        <a href="paginaCadastro.html" class="lg-register-link">Cadastre-se</a>
                     </p>
                 </form>
             </div>
