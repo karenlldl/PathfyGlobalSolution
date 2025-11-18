@@ -1822,3 +1822,197 @@ color: #dcdcdc;
 }
 
 
+/* ========================================================= */
+/* 1) DESKTOP MENOR: 992px até 1299px                        */
+/* ========================================================= */
+
+@media (max-width: 1299px) and (min-width: 992px) {
+  .lg-container {
+    max-width: 960px;
+  }
+
+  .lg-left {
+    padding: 40px 32px;
+  }
+
+  .lg-right {
+    padding: 40px 40px;
+  }
+
+  .lg-title-maior {
+    font-size: 40px;
+  }
+
+  .lg-mascote {
+    max-width: 400px;
+    right: -100px;
+  }
+}
+
+/* ========================================================= */
+/* 2) TABLET: 768px até 991px                                */
+/* ========================================================= */
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .lg-main {
+    padding: 48px 10px;
+  }
+
+  .lg-container {
+    max-width: 991px;
+  }
+
+  .lg-left {
+    padding: 150px 15px;
+  }
+
+  .lg-right {
+    padding: 10px 28px;
+  }
+
+  .lg-title-menor {
+    font-size: 20px;
+  }
+
+  .lg-title-maior {
+    font-size: 34px;
+  }
+
+  .lg-mascote {
+    max-width: 230px;
+    right: -50px;
+  }
+
+  .lg-login-title {
+    font-size: 24px;
+  }
+}
+
+/* ========================================================= */
+/* 3) TELAS MÉDIAS: 481px até 767px                          */
+/* ========================================================= */
+
+@media (max-width: 767px) and (min-width: 481px) {
+  .lg-main {
+    padding: 40px 12px;
+  }
+
+  .lg-container {
+    flex-direction: column;
+    max-width: 520px;
+  }
+
+  .lg-left,
+  .lg-right {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  .lg-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .lg-mascote {
+    position: static;
+    margin-top: 16px;
+    max-width: 220px;
+  }
+
+  .lg-title-menor {
+    font-size: 18px;
+  }
+
+  .lg-title-maior {
+    font-size: 32px;
+  }
+
+  .lg-login-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .lg-form {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================================= */
+/* 4) MOBILE: até 480px                                      */
+/* ========================================================= */
+
+@media (max-width: 480px) {
+  .lg-main {
+    padding: 24px 10px;
+  }
+
+  .lg-container {
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 0;          
+  }
+
+  .lg-left,
+  .lg-right {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .lg-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .lg-title-menor {
+    font-size: 16px;
+  }
+
+  .lg-title-maior {
+    font-size: 26px;
+  }
+
+  .lg-mascote {
+    position: static;
+    margin-top: 12px;
+    max-width: 180px;
+  }
+
+  .lg-login-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .lg-form {
+    max-width: 100%;
+  }
+
+  .lg-label {
+    font-size: 13px;
+  }
+
+  .lg-input {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .lg-btn {
+    padding: 10px 0;
+  }
+
+  .lg-register-text {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+/* Impede o mascote de bloquear cliques */
+.lg-mascote {
+  pointer-events: none; 
+  z-index: 0; 
+}
+
+.lg-right {
+  position: relative;
+  z-index: 2;
+}
