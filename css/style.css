@@ -777,6 +777,271 @@ body {
   margin-top: 8px;
 }
 
+/*-------- Layout da página do colaborador ---------*/
+.colab-main {
+  background-color: #c7d9f2;
+  min-height: 100%;
+}
+
+.colab-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  min-height: 900px;
+}
+
+/* SIDEBAR LATERAL ESQUERDA */
+.colab-sidebar {
+  width: 260px;
+  background-color: #b8cbe9;
+  border-radius: 0;
+  padding: 24px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Perfil na sidebar */
+.colab-profile {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.colab-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.colab-hello {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Navegação lateral */
+.colab-nav {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colab-nav-btn {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #5b7ddf;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+}
+
+.colab-nav-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.colab-nav-btn.active {
+  background: linear-gradient(90deg,#a66afe,#6f91f3);
+}
+
+/* ÁREA PRINCIPAL */
+.colab-content {
+  flex: 1;
+  background-color: #c7d9f2;
+  padding: 0 0 40px;
+}
+
+/* Blocos */
+.colab-block {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 24px 32px;
+}
+
+.colab-title {
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #28416b;
+}
+
+.perfil-info-box{
+  color: #102341;
+}
+
+.colab-subtitle {
+  margin-top: -10px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: #4c5f82;
+}
+
+/* Card de perfil */
+.colab-profile-card {
+  background-color: #9eb7e0;
+  border-radius: 16px;
+  padding: 18px 24px;
+  max-width: 540px;
+  color: #102341;
+  font-size: 14px;
+}
+
+.colab-profile-card span {
+  font-weight: 700;
+}
+
+/* Cursos em andamento */
+.colab-course-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.colab-course-card {
+  display: flex;
+  background-color: #9eb7e0;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 420px;
+}
+
+.colab-course-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.colab-course-info {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.colab-course-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.colab-course-info p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Barra de progresso */
+.colab-progress-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #c3d6f2;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.colab-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#a66afe,#6f91f3);
+}
+
+.colab-progress-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e3054;
+}
+
+/* Trilha de aprendizado */
+.colab-trilha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 700px;
+}
+
+.colab-trilha-card {
+  background-color: #9eb7e0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 13px;
+  color: #102341;
+}
+
+.colab-trilha-card h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.colab-link-curso {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#a66afe,#6f91f3);
+}
+
+/* Vagas */
+.colab-vagas-list {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colab-vaga-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: #9eb7e0;
+  border-radius: 10px;
+}
+
+.colab-vaga-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #28416b;
+}
+
+.colab-vaga-info h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.colab-vaga-info p {
+  font-size: 12px;
+}
+
+/* Controle de seções (Início / Pathfy / Vagas) */
+.colab-section {
+  display: none;
+}
+
+.colab-section.active {
+  display: block;
+}
+
+
 /* ======== FOOTER ======== */
 .footer {
   width: 100%;
@@ -900,6 +1165,247 @@ body {
   outline: none;
 }
 
+/* RESPONSIVIDADE COLABORADOR */
+@media (max-width: 900px) {
+  .colab-wrapper {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .colab-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .colab-profile {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .colab-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .colab-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2px;
+    margin-top: 0;
+  }
+
+  .colab-nav-btn {
+    width: auto;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .colab-content {
+    padding: 0;
+  }
+
+  .colab-block {
+    padding: 20px 12px;
+  }
+}
+
+/*----PÁGINA SOBRE---*/
+/* HERO */
+.sobre-hero {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+padding: 4rem 2rem;
+gap: 2rem;
+margin: 0 auto;
+width: 100%;
+}
+
+.sobre-hero{
+  background: linear-gradient(90deg, #12073a, #0a0434);
+}
+
+.sobre-hero img {
+width: 100%;
+max-width: 600px;
+border-radius: 2%;
+}
+
+
+.sobre-hero-texto {
+max-width: 520px;
+color: #e4e4e4;
+line-height: 1.6rem;
+}
+
+
+.sobre-hero-texto h1 {
+font-size: 1.9rem;
+margin-bottom: 1rem;
+background: linear-gradient(90deg, #c471ed, #00eaff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+/* PROBLEMA & SOLUÇÃO */
+.sobre-blocos {
+background-color: #dce9f7;
+padding: 4rem 2rem;
+}
+
+
+.sobre-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2rem;
+width: 50%;
+margin: 0 auto;
+}
+
+
+.sobre-card {
+background-color: #0c022e;
+color: #ffffff;
+padding: 2rem;
+border-radius: 20px;
+flex: 1;
+min-width: 280px;
+width: 100%;
+box-shadow: 0 0 20px rgba(162, 0, 255, 0.3);
+}
+
+
+.sobre-card h2 {
+font-size: 1.8rem;
+margin-bottom: 1rem;
+background: linear-gradient(90deg, #c471ed, #00eaff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+.sobre-card p {
+line-height: 1.6rem;
+color: #dcdcdc;
+}
+
+/*--------PÁGINA LOGIN isolado --------*/
+.lg-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.lg-container {
+    width: 50%;
+    max-width: 1100px;
+    height: 780px;
+    background: #E2EDF7;
+    border-radius: 18px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.lg-left {
+    width: 50%;
+    background: #B5CDE9;
+    padding: 50px;
+    position: relative;
+}
+
+.lg-title-menor {
+    font-size: 26px;
+    color: #8589D5;
+    margin: 0;
+}
+
+.lg-title-maior {
+    font-size: 59px;
+    font-weight: 700;
+    margin-top: -20px;
+    color: rgba(255, 255, 255, 0.44);
+}
+
+.lg-mascote {
+    width: 500px;
+    position: absolute;
+    bottom: 0px;
+    right: -130px;
+    z-index: 5;
+}
+
+.lg-right {
+    width: 55%;
+    padding: 60px 70px;
+}
+
+.lg-login-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5A63D9;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+.lg-label {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+.lg-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: none;
+    background: #C7D7EB;
+    font-size: 15px;
+}
+
+.lg-btn {
+    width: 160px;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: white;
+    background: linear-gradient(90deg, #B5CDE9, #6E9DD4);
+    cursor: pointer;
+}
+
+.lg-btn:hover {
+    opacity: 0.9;
+}
+
+.lg-register-text {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #09042D;
+}
+
+.lg-register-link {
+    color: #6F76EA;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lg-register-link:hover {
+    text-decoration: underline;
+}
 
 /* Responsivo */
 @media (max-width: 1024px) {
@@ -1204,201 +1710,6 @@ body {
     text-align: center;
   }
 }
-
-/*----PÁGINA SOBRE---*/
-/* HERO */
-.sobre-hero {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-padding: 4rem 2rem;
-gap: 2rem;
-margin: 0 auto;
-width: 100%;
-}
-
-.sobre-hero{
-  background: linear-gradient(90deg, #12073a, #0a0434);
-}
-
-.sobre-hero img {
-width: 100%;
-max-width: 600px;
-border-radius: 2%;
-}
-
-
-.sobre-hero-texto {
-max-width: 520px;
-color: #e4e4e4;
-line-height: 1.6rem;
-}
-
-
-.sobre-hero-texto h1 {
-font-size: 1.9rem;
-margin-bottom: 1rem;
-background: linear-gradient(90deg, #c471ed, #00eaff);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-
-/* PROBLEMA & SOLUÇÃO */
-.sobre-blocos {
-background-color: #dce9f7;
-padding: 4rem 2rem;
-}
-
-
-.sobre-cards {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 2rem;
-width: 50%;
-margin: 0 auto;
-}
-
-
-.sobre-card {
-background-color: #0c022e;
-color: #ffffff;
-padding: 2rem;
-border-radius: 20px;
-flex: 1;
-min-width: 280px;
-width: 100%;
-box-shadow: 0 0 20px rgba(162, 0, 255, 0.3);
-}
-
-
-.sobre-card h2 {
-font-size: 1.8rem;
-margin-bottom: 1rem;
-background: linear-gradient(90deg, #c471ed, #00eaff);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-
-.sobre-card p {
-line-height: 1.6rem;
-color: #dcdcdc;
-}
-
-/*--------PÁGINA LOGIN isolado --------*/
-.lg-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Container principal */
-.lg-container {
-    width: 50%;
-    max-width: 1100px;
-    height: 780px;
-    background: #E2EDF7;
-    border-radius: 18px;
-    display: flex;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-}
-
-
-.lg-left {
-    width: 50%;
-    background: #B5CDE9;
-    padding: 50px;
-    position: relative;
-}
-
-.lg-title-menor {
-    font-size: 26px;
-    color: #8589D5;
-    margin: 0;
-}
-
-.lg-title-maior {
-    font-size: 59px;
-    font-weight: 700;
-    margin-top: -20px;
-    color: rgba(255, 255, 255, 0.44);
-}
-
-.lg-mascote {
-    width: 500px;
-    position: absolute;
-    bottom: 0px;
-    right: -130px;
-    z-index: 5;
-}
-
-.lg-right {
-    width: 55%;
-    padding: 60px 70px;
-}
-
-.lg-login-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #5A63D9;
-    margin-bottom: 25px;
-}
-
-/* Formulário */
-.lg-label {
-    display: block;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #444;
-}
-
-.lg-input {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border-radius: 6px;
-    border: none;
-    background: #C7D7EB;
-    font-size: 15px;
-}
-
-.lg-btn {
-    width: 160px;
-    margin-top: 25px;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 17px;
-    color: white;
-    background: linear-gradient(90deg, #B5CDE9, #6E9DD4);
-    cursor: pointer;
-}
-
-.lg-btn:hover {
-    opacity: 0.9;
-}
-
-.lg-register-text {
-    font-size: 12px;
-    margin-top: 15px;
-    color: #09042D;
-}
-
-.lg-register-link {
-    color: #6F76EA;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.lg-register-link:hover {
-    text-decoration: underline;
-}
-
 
 /* ------- HERO / HEADER RESPONSIVO --------*/
 

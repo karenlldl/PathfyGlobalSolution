@@ -4,8 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
-    <h1>Em construção</h1>
+    <header class="hero">
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo_pathfy.png" alt="Pathfy">
+  </a>
+
+  <button class="menu-toggle">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="cursos.html">Cursos</a></li>
+    </ul>
+
+    <a href="paginaLogin.html" class="btn-login">Login</a>
+  </div>
+</nav>
+</header>
+
+    <main class="colab-main">
+    <div class="colab-wrapper">
+
+      <aside class="colab-sidebar">
+        <button class="colab-hamburger" aria-label="Menu lateral">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="colab-profile">
+          <img src="assets/images/maria-usuario.jpg" alt="Foto de Maria" class="colab-avatar">
+
+          <p class="colab-hello">Olá, Maria!</p>
+        </div>
+
+        <nav class="colab-nav">
+          <button class="colab-nav-btn active" data-section-target="colab-section-inicio">
+            Início
+          </button>
+          <button class="colab-nav-btn" data-section-target="colab-section-pathfy">
+            Pathfy IA
+          </button>
+          <button class="colab-nav-btn" data-section-target="colab-section-vagas">
+            Vagas
+          </button>
+        </nav>
+      </aside>
+
+      <section class="colab-content">
+
+        <section id="colab-section-inicio" class="colab-section active">
+          <section class="colab-block">
+            <h2 class="colab-title">Meu perfil</h2>
+
+            <div class="perfil-info-box">
+                <p><strong>Nome:</strong> <span id="perfil-nome">—</span></p>
+                <p><strong>Empresa:</strong> <span id="perfil-empresa">—</span></p>
+                <p><strong>Cargo:</strong> <span id="perfil-cargo">—</span></p>
+                <p><strong>Interesses de aprendizado:</strong> <span id="perfil-interesses">—</span></p>
+        </div>
+          </section>
+
+          <section class="colab-block">
+            <h2 class="colab-title">Cursos em andamento</h2>
+
+            <div class="colab-course-row">
+              <article class="colab-course-card">
+                <img src="assets/images/curso-ui-ux.jpg"
+                     alt="Capa do curso UI/UX"
+                     class="colab-course-img">
+
+                <div class="colab-course-info">
+                  <h3>UX/UI Design – Experiência & Interface do Usuário</h3>
+                  <p>Avanço atual</p>
+
+                  <div class="colab-progress-bar">
+                    <div class="colab-progress-fill" style="width: 90%;"></div>
+                  </div>
+
+                  <span class="colab-progress-label">90%</span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Trilha de aprendizado -->
+          <section class="colab-block">
+            <h2 class="colab-title">Trilha de aprendizado</h2>
+            <p class="colab-subtitle">Recomendações pela IA</p>
+
+            <div class="colab-trilha-grid">
+              <!-- Curso 1 da página de cursos -->
+              <article class="colab-trilha-card">
+                <h3>Marketing Digital & Growth Hacking</h3>
+                <p>
+                  Trilha completa para Domine estratégias modernas de marketing digital, tráfego pago, redes sociais.
+                </p>
+                <a href="cursos.html#curso-fullstack" class="colab-link-curso">
+                  Ver detalhes
+                </a>
+              </article>
+
+              <article class="colab-trilha-card">
+                <h3>UX & UI Design Essencial</h3>
+                <p>
+                  Aprenda pesquisa com usuário, prototipação e
+                  interfaces que convertem, do zero ao protótipo final.
+                </p>
+                <a href="cursos.html#curso-uxui" class="colab-link-curso">
+                  Ver detalhes
+                </a>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <!-- ============ SEÇÃO PATHFY IA ============ -->
+        <section id="colab-section-pathfy" class="colab-section">
+          <section class="colab-block">
+            <h2 class="colab-title">Pathfy IA</h2>
+            <p>
+              Em breve aqui você verá nosso ChatBot.
+            </p>
+          </section>
+        </section>
+
+        <!-- ============ SEÇÃO VAGAS ============ -->
+        <section id="colab-section-vagas" class="colab-section">
+          <section class="colab-block">
+            <h2 class="colab-title">Vagas</h2>
+            <p class="colab-subtitle">com base no seu perfil</p>
+
+            <div class="colab-vagas-list">
+              <article class="colab-vaga-card">
+                <div class="colab-vaga-logo">Talk!</div>
+                <div class="colab-vaga-info">
+                  <h3>Analista Júnior de Marketing Operations</h3>
+                  <p>São Paulo, Brasil • Híbrido</p>
+                </div>
+              </article>
+
+              <article class="colab-vaga-card">
+                <div class="colab-vaga-logo">Talk!</div>
+                <div class="colab-vaga-info">
+                  <h3>Especialista em Growth e Experiência do Usuário</h3>
+                  <p>São Paulo, Brasil • Híbrido</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+    <div class="footer-col brand">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo_pathfy.png" alt="Logo Pathfy">
+      </a>
+      <p class="footer-text">O caminho da evolução profissional.</p>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contato</h4>
+      <a href="mailto:rm566870@fiap.com.br" class="footer-link">
+        <i class="fa-solid fa-envelope"></i>
+        rm566870@fiap.com.br
+      </a>
+    </div>
+
+    <div class="footer-col social">
+      <h4>Redes Sociais</h4>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <p>2025 © Pathfy — Denise • Henrique • Karen</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
 </body>
 </html>
