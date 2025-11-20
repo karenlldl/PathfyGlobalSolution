@@ -1,58 +1,4 @@
-// MENU MOBILE
-const menuToggle = document.querySelector(".menu-toggle");
-const navRight = document.querySelector(".nav-right");
-
-if (menuToggle && navRight) {
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("open");
-    navRight.classList.toggle("open");
-  });
-}
-
-// MENSAGEM DE ENVIO DE CONTATO (só se o form existir na página)
-const form = document.getElementById("form-contato");
-
-if (form) {
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // impede envio real
-
-    if (!form.checkValidity()) {
-      form.reportValidity(); // força o navegador a mostrar os erros
-      return;
-    }
-
-    alert("Mensagem enviada, entraremos em contato!");
-
-    form.reset(); 
-  });
-}
-
-// FAQ – ABRIR/FECHAR PERGUNTAS
-const perguntas = document.querySelectorAll(".faq .pergunta");
-
-if (perguntas.length) {
-  perguntas.forEach((pergunta) => {
-    const titulo = pergunta.querySelector("h3");
-
-    if (!titulo) return;
-
-    titulo.style.cursor = "pointer";
-
-    titulo.addEventListener("click", function () {
-      // fecha as outras
-      perguntas.forEach((p) => {
-        if (p !== pergunta) {
-          p.classList.remove("ativa");
-        }
-      });
-
-      pergunta.classList.toggle("ativa");
-    });
-  });
-}
-
-// PÁGINA LOGIN
-// === FUNÇÕES AUXILIARES PARA LOCALSTORAGE ===
+// ------------------ FUNÇÕES GERAIS ---------------
 function salvarUsuarioPathfy(usuario) {
   localStorage.setItem("usuarioPathfy", JSON.stringify(usuario));
 }
@@ -68,10 +14,59 @@ function carregarUsuarioPathfy() {
   }
 }
 
+// ----------- QUANDO O DOM CARREGAR ------------
 document.addEventListener("DOMContentLoaded", function () {
   const caminho = window.location.pathname;
 
-  // ========== CADASTRO ==========
+  // ========== MENU MOBILE ==========
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navRight = document.querySelector(".nav-right");
+
+  if (menuToggle && navRight) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("open");
+      navRight.classList.toggle("open");
+    });
+  }
+
+  // ----------- FORMULÁRIO DE CONTATO ---------------
+  const formContato = document.getElementById("form-contato");
+
+  if (formContato) {
+    formContato.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!formContato.checkValidity()) {
+        formContato.reportValidity();
+        return;
+      }
+
+      alert("Mensagem enviada, entraremos em contato!");
+      formContato.reset();
+    });
+  }
+
+  // -------------- FAQ ----------
+  const perguntas = document.querySelectorAll(".faq .pergunta");
+
+  if (perguntas.length) {
+    perguntas.forEach((pergunta) => {
+      const titulo = pergunta.querySelector("h3");
+      if (!titulo) return;
+
+      titulo.style.cursor = "pointer";
+
+      titulo.addEventListener("click", () => {
+        perguntas.forEach((p) => {
+          if (p !== pergunta) p.classList.remove("ativa");
+        });
+        pergunta.classList.toggle("ativa");
+      });
+    });
+  }
+
+  // -------------- CADASTRO (paginaCadastro.html) -----------------
+
   if (caminho.includes("paginaCadastro")) {
     const formCadastro = document.getElementById("lg-form");
 
@@ -79,21 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
       formCadastro.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const nome = document.getElementById("lg-nome").value.trim();
-        const empresa = document.getElementById("lg-empresa").value.trim();
-        const cargo = document.getElementById("lg-cargo").value.trim();
-        const interessesSelect = document.getElementById("interesses");
-        let interesses = [];
+        const nome = document.getElementById("lg-nome")?.value.trim();
+        const empresa = document.getElementById("lg-empresa")?.value.trim();
+        const cargo = document.getElementById("lg-cargo")?.value.trim();
 
-        if (interessesSelect) {
-        const selecionados = [...interessesSelect.selectedOptions];
-       interesses = selecionados.map(opt => opt.value); // pega todos os valores
-        }
+        const interessesSelect = document.getElementById("lg-interesses");
+        const interesses = interessesSelect ? interessesSelect.value : "";
 
-        const email = document.getElementById("lg-email").value.trim();
-        const senha = document.getElementById("lg-senha").value.trim();
+        const email = document.getElementById("lg-email")?.value.trim();
+        const senha = document.getElementById("lg-senha")?.value.trim();
 
-        // validação simples
         if (!nome || !empresa || !cargo || !interesses || !email || !senha) {
           alert("Por favor, preencha todos os campos para concluir o cadastro.");
           return;
@@ -103,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
           nome,
           empresa,
           cargo,
-          interesses,
+          interesses, // string (ex: "Python", "Java", "UX/UI")
           email,
           senha,
         };
@@ -116,7 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ========== LOGIN ==========
+  //------------- LOGIN (paginaLogin.html)----------------
+
   if (caminho.includes("paginaLogin")) {
     const formLogin = document.getElementById("lg-form");
 
@@ -124,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
       formLogin.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const email = document.getElementById("lg-email").value.trim();
-        const senha = document.getElementById("lg-senha").value.trim();
+        const email = document.getElementById("lg-email")?.value.trim();
+        const senha = document.getElementById("lg-senha")?.value.trim();
 
         if (!email || !senha) {
           alert("Preencha email e senha para continuar.");
@@ -149,68 +140,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-}); // fim do primeiro DOMContentLoaded
+  // ---------- PÁGINA DE USUÁRIO (paginaUsuario.html) --------
 
+  if (caminho.includes("paginaUsuario")) {
+    const usuario = carregarUsuarioPathfy();
+    if (!usuario) {
+      console.warn("Nenhum usuário encontrado no localStorage.");
+    } else {
+      // Sidebar "Olá, Maria!"
+      const hello = document.querySelector(".colab-hello");
+      if (hello) {
+        const primeiroNome = usuario.nome.split(" ")[0];
+        hello.textContent = `Olá, ${primeiroNome}!`;
+      }
 
-// ========== PÁGINA DE USUÁRIO (preencher perfil) ==========
-document.addEventListener("DOMContentLoaded", function () {
-  if (!window.location.pathname.includes("paginaUsuario")) return;
+      // Card "Meu perfil" – certifique-se que o HTML tem esses IDs
+      const nomePerfil = document.getElementById("perfil-nome");
+      const empresaPerfil = document.getElementById("perfil-empresa");
+      const cargoPerfil = document.getElementById("perfil-cargo");
+      const interessesPerfil = document.getElementById("perfil-interesses");
 
-  const usuario = carregarUsuarioPathfy();
-  if (!usuario) {
-    console.warn("Nenhum usuário encontrado no localStorage.");
-    return;
-  }
+      if (nomePerfil) nomePerfil.textContent = usuario.nome;
+      if (empresaPerfil) empresaPerfil.textContent = usuario.empresa;
+      if (cargoPerfil) cargoPerfil.textContent = usuario.cargo;
+      if (interessesPerfil) interessesPerfil.textContent = usuario.interesses;
+    }
 
-  // Sidebar "Olá, Maria!"
-  const hello = document.querySelector(".colab-hello");
-  if (hello) {
-    const primeiroNome = usuario.nome.split(" ")[0];
-    hello.textContent = `Olá, ${primeiroNome}!`;
-  }
+  // Navegação lateral (Início / Pathfy IA / Vagas)
+    const navButtons = document.querySelectorAll(".colab-nav-btn");
+    const sections = document.querySelectorAll(".colab-section");
 
-  // Card "Meu perfil"
-  const nomePerfil = document.getElementById("perfil-nome");
-  const empresaPerfil = document.getElementById("perfil-empresa");
-  const cargoPerfil = document.getElementById("perfil-cargo");
-  const interessesPerfil = document.getElementById("perfil-interesses");
+    if (navButtons.length && sections.length) {
+      navButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          navButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
 
-  if (nomePerfil) nomePerfil.textContent = usuario.nome;
-  if (empresaPerfil) empresaPerfil.textContent = usuario.empresa;
-  if (cargoPerfil) cargoPerfil.textContent = usuario.cargo;
-  
-  if (interessesPerfil) {
-  if (Array.isArray(usuario.interesses)) {
-    interessesPerfil.textContent = usuario.interesses.join(", ");
-  } else {
-    interessesPerfil.textContent = usuario.interesses;
-  }
-}
-});
+          const targetId = btn.getAttribute("data-section-target");
 
-
-// PÁGINA COLABORADOR BOTÕES
-
-document.addEventListener("DOMContentLoaded", function () {
-  const navButtons = document.querySelectorAll(".colab-nav-btn");
-  const sections = document.querySelectorAll(".colab-section");
-
-  navButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      // ativa botão
-      navButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const targetId = btn.getAttribute("data-section-target");
-
-      // mostra seção correspondente
-      sections.forEach((sec) => {
-        if (sec.id === targetId) {
-          sec.classList.add("active");
-        } else {
-          sec.classList.remove("active");
-        }
+          sections.forEach((sec) => {
+            if (sec.id === targetId) {
+              sec.classList.add("active");
+            } else {
+              sec.classList.remove("active");
+            }
+          });
+        });
       });
-    });
-  });
+    }
+  }
 });
