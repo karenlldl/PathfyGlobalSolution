@@ -77,23 +77,23 @@ O sistema representa como seria a integração real com:
 
 # 🗂 Estrutura de Pastas
 
-/Pathfy
-├── /css
-│     └── style.css           # Estilos gerais, responsividade e menu mobile
-│
-├── /js
-│     └── script.js           # Validações, lógicas de simulação e interações
-│
-├── /assets
-│     ├── /images             # Logos, mascotes, elementos visuais
-│
-│── index.html                # Página inicial institucional (Pathfy)
-│── paginaLogin.html          # Login corporativo
-│── paginaCadastro.html       # Cadastro do colaborador
-│── paginaUsuario.html        # Dashboard do colaborador
-│── cursos.html               # Cursos simulados
-│── sobre.html                # Sobre o projeto
-│── README.md                 # Documentação oficial do projeto
+/Pathfy\
+├── /css\
+│     └── style.css           # Estilos gerais, responsividade e menu mobile\
+│\
+├── /js\
+│     └── script.js           # Validações, lógicas de simulação e interações\
+│\
+├── /assets\
+│     ├── /images             # Logos, mascotes, elementos visuais\
+│\
+│── index.html                # Página inicial institucional (Pathfy)\
+│── paginaLogin.html          # Login corporativo\
+│── paginaCadastro.html       # Cadastro do colaborador\
+│── paginaUsuario.html        # Dashboard do colaborador\
+│── cursos.html               # Cursos simulados\
+│── sobre.html                # Sobre o projeto\
+│── README.md                 # Documentação oficial do projeto\
 
 ### ✔ Por que essa estrutura é importante?
 
