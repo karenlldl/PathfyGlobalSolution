@@ -1,4 +1,4 @@
-# 📘 Pathfy B2B – Plataforma Corporativa de Upskilling e Reskilling  
+# 💜 Pathfy B2B – Plataforma Corporativa de Upskilling e Reskilling  
 ### Global Solution – FIAP (1TDS)
 
 O **Pathfy B2B** é uma plataforma corporativa projetada para ajudar empresas a desenvolverem seus colaboradores por meio de **trilhas inteligentes de aprendizado**, **análise de risco de automação** e **simulação de mobilidade interna**.  
