@@ -2,7 +2,7 @@
 ### Global Solution – FIAP (1TDS)
 
 O **Pathfy B2B** é uma plataforma corporativa projetada para ajudar empresas a desenvolverem seus colaboradores por meio de **trilhas inteligentes de aprendizado**, **análise de risco de automação** e **simulação de mobilidade interna**.  
-O sistema faz uso de IA conversacional (WatsonX) para orientar o colaborador e sugerir caminhos de carreira baseados em dados corporativos simulados.
+O sistema faz uso de IA conversacional (WatsonX) para orientar o colaborador e sugerir caminhos de carreira baseados em dados corporativos.
 
 ---
 
