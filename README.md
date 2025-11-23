@@ -88,6 +88,9 @@ O sistema representa como seria a integração real com:
 │     ├── /images             # Logos, mascotes, elementos visuais\
 │\
 │── index.html                # Página inicial institucional (Pathfy)\
+│── contato.html              # Contato Pathfy\
+│── faq.html                  # Perguntas Frequentes\
+│── integrantes.html          # PIntegrantes Pathfy\
 │── paginaLogin.html          # Login corporativo\
 │── paginaCadastro.html       # Cadastro do colaborador\
 │── paginaUsuario.html        # Dashboard do colaborador\
