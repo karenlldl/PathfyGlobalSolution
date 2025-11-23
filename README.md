@@ -1,5 +1,5 @@
 # 💜 Pathfy – Plataforma Corporativa de Upskilling e Reskilling  
-### Global Solution – FIAP (1TDS)
+### Global Solution – FIAP (1TDSPA)
 
 O **Pathfy** é uma plataforma corporativa projetada para ajudar empresas a desenvolverem seus colaboradores por meio de **trilhas inteligentes de aprendizado**, **análise de risco de automação** e **simulação de mobilidade interna**.  
 O sistema faz uso de IA conversacional (WatsonX) para orientar o colaborador e sugerir caminhos de carreira baseados em dados corporativos.
