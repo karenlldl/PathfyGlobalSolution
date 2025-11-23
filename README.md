@@ -46,6 +46,14 @@ O **Pathfy B2B resolve isso** fornecendo:
 
 # 🧠 Guia Técnico Informativo
 
+Para simular o perfil da persona que criamos faça o cadastro com os seguintes dados:
+- Nome: Maria Silva
+- Empresa: Talk!
+- Cargo: Operadora de Telemarketing
+- Interesse: UX/UI
+- Email: (use um ficticio)
+- Senha: (use uma ficticia)
+
 A solução é composta por:
 
 ### ✔ Interface completa em HTML, CSS e JavaScript  
