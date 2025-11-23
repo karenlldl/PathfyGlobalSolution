@@ -1407,6 +1407,12 @@ color: #dcdcdc;
     text-decoration: underline;
 }
 
+.link-ia{
+    color: #6F76EA;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 /* Responsivo */
 @media (max-width: 1024px) {
   .beneficios-cards { grid-template-columns: repeat(2, 1fr); }
