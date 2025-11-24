@@ -54,6 +54,9 @@ Para simular o perfil da persona que criamos faça o cadastro com os seguintes d
 - Email: (use um ficticio)
 - Senha: (use uma ficticia)
 
+## Link para o pitch explicativo da solução: 
+https://youtu.be/RBPdR4vhWsA
+
 A solução é composta por:
 
 ### ✔ Interface completa em HTML, CSS e JavaScript  
