@@ -1,4 +1,6 @@
 # 💜 Pathfy – Plataforma Corporativa de Upskilling e Reskilling  
+
+##Link Vercel: https://pathfyplatform.vercel.app/
 ### Global Solution – FIAP (1TDSPA)
 
 O **Pathfy** é uma plataforma corporativa projetada para ajudar empresas a desenvolverem seus colaboradores por meio de **trilhas inteligentes de aprendizado**, **análise de risco de automação** e **simulação de mobilidade interna**.  
